@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#008080"><title>Birthday.exe — Windows 95</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="desktop">
+<div class="icons">
+<button class="deskicon" data-open="about"><b class="ico">▣</b>Мой компьютер</button>
+<button class="deskicon" data-open="invite"><b class="ico">✉</b>Приглашение.txt</button>
+<button class="deskicon" data-open="culmination"><b class="ico">♥</b>Кульминация.txt</button>
+<button class="deskicon" data-open="games"><b class="ico">♟</b>Развлечения</button>
+<button class="deskicon" data-open="photo"><b class="ico">🖼</b>Не открывать.jpg</button>
+<button class="deskicon" data-open="cheshki"><b class="ico">🖼</b>Чешки.jpg</button>
+</div>
+<section class="window main" id="mainWindow">
+<header class="titlebar"><span>▣ Birthday.exe — Система приглашений</span><div><button id="minimize">_</button><button id="maximize">□</button><button id="close">×</button></div></header>
+<nav class="menubar"><button data-menu="Файл">Файл</button><button data-menu="Правка">Правка</button><button data-menu="Вид">Вид</button><button data-menu="Справка">Справка</button></nav>
+<div class="content"><div class="brand"><div class="flag"><i></i><i></i><i></i><i></i></div><div><small>MICROSOFT® WINDOWS 95</small><h1>День рождения<br><em>Никиты</em></h1></div></div>
+<hr><div class="alert"><b>!</b><div><strong>Системное уведомление</strong><p>Обнаружено событие повышенной важности. Требуется участие пользователя.</p></div></div>
+<div class="date"><strong>24</strong><div><b>ОКТЯБРЯ</b><small>Сохраните дату в календаре и в оперативной памяти.</small></div></div>
+<div class="load"><div><span>Загрузка праздничного настроения...</span><span id="percent">95%</span></div><div class="bar"><i id="fill"></i></div></div>
+<div class="buttons"><button class="winbtn" id="openInvite">Открыть приглашение</button><button class="winbtn" id="surprise">Сделать что-нибудь</button></div>
+<p class="fine">© 2002–2026 Никита Systems. Все права защищены, кроме права отказаться от торта.</p></div>
+<footer class="status"><span id="statusText">Готово</span><span>Память: торт 64 МБ</span></footer></section>
+
+<section class="window floating hidden" id="inviteWindow"><header class="titlebar"><span>✉ Приглашение.txt — Блокнот</span><button data-close="inviteWindow">×</button></header><div class="notepad"><p>Привет, пользователь!</p><p>Официальное уведомление: <b>24 октября</b> состоится день рождения Никиты.</p><p>В программе: общение, веселье, внезапные истории и попытки вспомнить, кто украл резиновый член.</p><p><b>Требования к системе:</b></p><ul><li>хорошее настроение — желательно;</li><li>подарок — по желанию;</li><li>прийти и не зависнуть дома — обязательно.</li></ul><p>Нажми «Я в деле», чтобы зарегистрировать присутствие.</p><div class="buttons"><button class="winbtn" id="confirm">Я в деле!</button><button class="winbtn" data-close="inviteWindow">Позже...</button></div><p class="fine">* Это не юридический договор. Но Никита всё запомнит.</p></div></section>
+
+<section class="window floating hidden" id="culminationWindow"><header class="titlebar"><span>♥ Кульминация.txt — Блокнот</span><button data-close="culminationWindow" aria-label="Закрыть">×</button></header><div class="notepad culmination"><p>СЕКРЕТНЫЙ ФАЙЛ ОТКРЫТ</p><hr><p class="punchline">Целую в хуй &lt;3</p><p class="fine">Файл автоматически удалится из истории приличий через 3... 2... ладно, не удалится.</p><div class="buttons"><button class="winbtn" data-close="culminationWindow">Понятно...</button></div></div></section>
+
+<section class="window floating hidden" id="photoWindow"><header class="titlebar"><span>🖼 Не открывать.jpg — Просмотр изображений</span><button data-close="photoWindow" aria-label="Закрыть">×</button></header><div class="photo-viewer"><img src="IMG_9185.jpeg" alt="Фотография двух друзей на ночной площади"/><p>Изображение успешно открыто. Предупреждение было не случайным.</p><button class="winbtn" data-close="photoWindow">Закрыть</button></div></section>
+
+<section class="window floating hidden" id="cheshkiWindow"><header class="titlebar"><span>🖼 Чешки.jpg — Просмотр изображений</span><button data-close="cheshkiWindow" aria-label="Закрыть">×</button></header><div class="photo-viewer"><img src="IMG_0340.webp" alt="Изображение с надписью Чешки"/><button class="winbtn" data-close="cheshkiWindow">Закрыть</button></div></section>
+
+<section class="window floating hidden" id="gamesWindow"><header class="titlebar"><span>♟ Развлечения — Игровой центр</span><button data-close="gamesWindow">×</button></header><div class="game"><h2>Сапёр праздничного настроения</h2><p>Найди три торта. Остальное — мины скуки.</p><div class="grid" id="grid"></div><p id="gameMessage">Осталось найти: 3</p><button class="winbtn" id="reset">Новая игра</button></div></section>
+
+<section class="window floating hidden" id="aboutWindow"><header class="titlebar"><span>▣ О программе</span><button data-close="aboutWindow">×</button></header><div class="about"><b class="logo95">95</b><div><h2>Windows 95: Birthday Edition</h2><p>Версия 24.10</p><p>Совместимость: друзья и люди, которые сказали «я ненадолго».</p><p>Лицензия: один праздник на пользователя.</p><button class="winbtn" data-close="aboutWindow">ОК</button></div></div></section>
+
+<div class="toast hidden" id="toast"><b>⚠</b><span id="toastText"></span><button id="toastClose">×</button></div>
+<div class="startmenu hidden" id="startMenu"><b class="side">Windows 95</b><button data-open="invite">✉　Приглашение</button><button data-open="culmination">♥　Кульминация.txt</button><button data-open="games">♟　Игры</button><button data-open="photo">🖼　Не открывать.jpg</button><button data-open="cheshki">🖼　Чешки.jpg</button><button data-open="about">▣　О программе</button><hr><button id="shutdown">⏻　Завершение работы...</button></div>
+<footer class="taskbar"><button id="start"><span class="miniFlag">▦</span><b>Пуск</b></button><button id="taskMain">▣ Birthday.exe</button><span class="spacer"></span><div class="tray">🔊 <span id="clock">12:00</span></div></footer>
+</main><script src="script.js"></script></body></html>
